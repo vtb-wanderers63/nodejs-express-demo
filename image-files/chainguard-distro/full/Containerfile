@@ -1,4 +1,4 @@
-FROM cgr.dev/chainguard/node:latest
+FROM cgr.dev/chainguard/node:latest-dev
 ENV NODE_ENV=production
 
 WORKDIR /app
