@@ -46,6 +46,14 @@ Setting up an existing git project:
 
 ## How to run the project
 
+`NB!`
+
+set pre-commit hooks as executable:
+
+```
+chmod +x .husky/pre-commit
+```
+
 - Step 1:
 
 Switch to the projects root directory and run `npm install` to install the required packages.
