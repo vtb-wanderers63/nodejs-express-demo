@@ -7,5 +7,4 @@ COPY package.json .
 RUN npm install --ignore-scripts
 COPY ./src ./src
 
-
 CMD ["npm", "run", "start"]

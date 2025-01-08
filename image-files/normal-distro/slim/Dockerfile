@@ -35,9 +35,11 @@ WORKDIR /app
 # copy dist directory
 # COPY --from=build /dev-app/dist ./
 
-COPY --from=prod-dependency-installations /prod-app/node_modules ./
+COPY --from=prod-dependency-installations /prod-app/node_modules ./node_modules
 
 COPY ./src ./src
+
+COPY package.json .
  
 # CMD ["node", "dist/server.js"]
 
