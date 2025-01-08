@@ -4,7 +4,8 @@ ENV NODE_ENV=production
 WORKDIR /app
 
 COPY package.json .
+RUN npm install --ignore-scripts
 COPY ./src ./src
-RUN npm install
+
 
 CMD ["npm", "run", "start"]
