@@ -113,7 +113,7 @@ docker build -t cgr-full-distro -f image-files/chainguard-distro/full/Dockerfile
 Run Image:
 
 ```
-docker run -p 3002:3001 cgr-full-distro
+docker run -p 3001:3002 cgr-full-distro
 ```
 
 chainguard slim
@@ -165,7 +165,7 @@ docker build -t normal-full-distro -f image-files/normal-distro/full/Dockerfile 
 Run Image:
 
 ```
-docker run -p 3002:3003 normal-full-distro
+docker run -p 3003:3002 normal-full-distro
 ```
 
 normal distro slim
@@ -177,5 +177,5 @@ docker build -t normal-slim-distro -f image-files/normal-distro/slim/Dockerfile 
 Run Image:
 
 ```
-docker run -p 3002:3004 normal-slim-distro
+docker run -p 3004:3002 normal-slim-distro
 ```
