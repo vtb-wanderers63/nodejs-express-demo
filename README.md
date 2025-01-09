@@ -84,10 +84,22 @@ chainguard full
 podman
 ```
 
+Run Image:
+
+```
+docker run -p 3002:3002
+```
+
 chainguard slim
 
 ```
 podman
+```
+
+Run Image:
+
+```
+docker run -p 3002:3002
 ```
 
 Docker:
@@ -98,10 +110,22 @@ chainguard full
 docker build -t cgr-full-distro -f image-files/chainguard-distro/full/Dockerfile .
 ```
 
+Run Image:
+
+```
+docker run -p 3002:3001 cgr-full-distro
+```
+
 chainguard slim
 
 ```
 docker build -t cgr-slim-distro -f image-files/chainguard-distro/slim/Dockerfile .
+```
+
+Run Image:
+
+```
+docker run -p 3002:3002 cgr-slim-distro
 ```
 
 Podman:
@@ -112,10 +136,22 @@ normal distro full
 podman
 ```
 
+Run Image:
+
+```
+docker run -p 3002:3002
+```
+
 normal distro slim
 
 ```
 podman
+```
+
+Run Image:
+
+```
+docker run -p 3002:3002
 ```
 
 Docker:
@@ -126,8 +162,20 @@ normal distro full
 docker build -t normal-full-distro -f image-files/normal-distro/full/Dockerfile .
 ```
 
+Run Image:
+
+```
+docker run -p 3002:3003 normal-full-distro
+```
+
 normal distro slim
 
 ```
 docker build -t normal-slim-distro -f image-files/normal-distro/slim/Dockerfile .
+```
+
+Run Image:
+
+```
+docker run -p 3002:3004 normal-slim-distro
 ```
