@@ -95,13 +95,13 @@ Docker:
 chainguard full
 
 ```
-docker
+docker build -t cgr-full-distro -f image-files/chainguard-distro/full/Dockerfile .
 ```
 
 chainguard slim
 
 ```
-docker
+docker build -t cgr-slim-distro -f image-files/chainguard-distro/slim/Dockerfile .
 ```
 
 Podman:
@@ -123,11 +123,11 @@ Docker:
 normal distro full
 
 ```
-docker
+docker build -t normal-full-distro -f image-files/normal-distro/full/Dockerfile .
 ```
 
 normal distro slim
 
 ```
-docker
+docker build -t normal-slim-distro -f image-files/normal-distro/slim/Dockerfile .
 ```
