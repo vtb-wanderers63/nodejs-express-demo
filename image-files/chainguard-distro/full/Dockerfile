@@ -3,8 +3,9 @@ ENV NODE_ENV=production
 
 WORKDIR /app
 
-COPY package.json .
+COPY --chown=node:node package.json .
+ADD ./src ./src
 RUN npm install --ignore-scripts
-COPY ./src ./src
 
-CMD ["npm", "run", "start"]
+
+ENTRYPOINT ["npm","run", "start"]

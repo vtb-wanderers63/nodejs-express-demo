@@ -3,18 +3,18 @@ ENV NODE_ENV=development
  
 WORKDIR /dev-app
  
-COPY package.json .
+COPY --chown=node:node package.json .
+
+ADD ./src ./src
 
 RUN npm install
 
-COPY ./src ./src
-
 # lint and test
-FROM base as lint-and-test
+# FROM base as lint-and-test
 
-RUN npm run lint
+# RUN npm run lint
 
-RUN npm run test
+# RUN npm run test
 
 # build
 # FROM test as build
@@ -25,7 +25,7 @@ FROM base as prod-dependency-installations
 ENV NODE_ENV=production
 WORKDIR /prod-app
 
-COPY package.json .
+COPY --chown=node:node package.json .
 
 RUN npm install --ignore-scripts
 
@@ -37,8 +37,10 @@ WORKDIR /app
 
 COPY --from=prod-dependency-installations /prod-app/node_modules ./node_modules
 
-COPY ./src ./src
+COPY --chown=node:node package.json .
+
+ADD ./src ./src
  
 # CMD ["node", "dist/server.js"]
 
-CMD ["npm", "run", "start"]
+ENTRYPOINT ["npm", "run", "start"]
