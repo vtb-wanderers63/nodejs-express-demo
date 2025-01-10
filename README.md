@@ -179,3 +179,7 @@ Run Image:
 ```
 docker run -p 3004:3002 normal-slim-distro
 ```
+
+```
+npx husky install
+```
