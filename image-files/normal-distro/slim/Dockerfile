@@ -41,6 +41,12 @@ COPY ./src ./src
 
 COPY package.json .
  
-# CMD ["node", "dist/server.js"]
+# Create group
+
+ARG UID=1001
+ARG GID=1001
+
+# Create group and add GID
+RUN addgroup --gid $GID nodeappgroup && adduser --uid $UID --ingroup nodeappgroup --system nodeappuser && chown -R nodeappuser:nodeappgroup ./src
 
 CMD ["npm", "run", "start"]
