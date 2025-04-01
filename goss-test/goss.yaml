@@ -1,0 +1,23 @@
+user:
+  nodeappuser:
+    exists: true
+    uid: 1001
+    gid: 1001
+
+group:
+  nodeappgroup:
+    exists: true
+    gid: 1001
+
+process:
+  node:
+    running: true
+
+env:
+  PORT: '8000'
+
+dns:
+  localhost:
+    resolvable: true
+    addrs:
+      - 127.0.0.1
