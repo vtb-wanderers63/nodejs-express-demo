@@ -9,9 +9,9 @@ group:
     exists: true
     gid: 1001
 
-process:
-  node:
-    running: true
+# process:
+#   node:
+#     running: true
 
 env:
   PORT: '8000'
